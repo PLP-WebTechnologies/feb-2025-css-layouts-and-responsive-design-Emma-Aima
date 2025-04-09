@@ -1,0 +1,136 @@
+body {
+    font-family:Segoe UI;
+    margin: 0;
+    padding: 0;
+    background-color: #1b0902ec;
+    color:rgb(245, 210, 210);
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    color: rgb(245, 210, 210);
+    padding: 10px 20px;
+}
+
+nav {
+    list-style-position: inside;
+    text-align: center;
+}
+
+nav ul {
+    list-style: disc;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    /* Center the navigation items */
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 10x 0;
+    text-align: center;
+}
+
+nav li {
+    margin: 0 15px;
+    display: list-item;
+    list-style-type: none;
+    /* Remove default list style */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;   /* Default for mobile */
+    gap: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Desfault for mobile */
+    gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    background-color: #f78d8d;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #5e4ef0;
+    color: black;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap:wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; /* Center the flex items */;
+}
+
+img {
+    width: 100%;  /* Keeps images within their container */
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #f5ea50;
+}
+
+.flex-item {
+    background-color: #fac178;
+    padding: 20px;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid #08791b;
+    flex: 1 1 200px; /* It allows items to grow, shrink and have a base width */
+}
+
+div {
+    display: block;  /* Default for <div> */
+    margin: 10px;
+    padding: 10px;
+    background-color: #f7ec5c;
+    border-radius: 5px;
+    border: 2px solid #5e4ef0;
+    color: black;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {  /* Tablets and larger screens */
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets and larger screens */
+    }
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Reponsive for tablets and larger screens */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets and larger screens */
+    }
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets and larger screens */
+    }
+    .flex-container {
+        flex-wrap: nowrap; /* No wrapping for larger screens */
+    }
+}
+
+@media (min-width: 1024px) { /* Desktops and larger screens */
+    .container {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for desktops and larger screens */
+    }
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for desktops and larger screens */
+    }
+    .flex-container {
+        flex-wrap: nowrap; /* No wrapping for larger screens */
+    }
+}
